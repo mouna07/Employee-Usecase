@@ -3,12 +3,16 @@ class EmployeeWage{
 	public static void main(String args[]){
 		System.out.println("Welocome to the Employee Wage problem");
 		Random random=new Random();
-		int workingDaysInMonth=20;
+		//constants
+		int maxHrsInMonth=100;
+		int maxWorkingDays=20;
 		int wagePerHour=20;
-		int employeeWage=0;
-		int totalEmpWage=0;
-		for(int day=1;day<=20;day++)
+		//variables
+		int totalempHr=0;
+		int totalworkingDays=0;
+		while(totalempHr < maxHrsInMonth && totalworkingDays < maxWorkingDays)
 		{
+			totalworkingDays=totalworkingDays+1;
 			int emphrs=0;
 			int empcheck=random.nextInt(3);
 			switch(empcheck)
@@ -23,10 +27,11 @@ class EmployeeWage{
 				emphrs=0;
 				break;
 			}
-		employeeWage = wagePerHour*emphrs;
-		totalEmpWage = employeeWage + totalEmpWage;
+		totalempHr=totalempHr+emphrs;
 		}
-		System.out.println("Employee wage for Month="+totalEmpWage);
+		int totalwage=totalempHr * wagePerHour;
+		System.out.println("total wage of an employee="+totalwage);
 
 	}
 }
+
