@@ -10,7 +10,7 @@ class EmployeeWage{
 		//variables
 		int totalempHr=0;
 		int totalworkingDays=0;
-		while(totalempHr < maxHrsInMonth && totalworkingDays < maxWorkingDays)
+		while(totalempHr < maxHrsInMonth || totalworkingDays < maxWorkingDays)
 		{
 			totalworkingDays=totalworkingDays+1;
 			int emphrs=0;
