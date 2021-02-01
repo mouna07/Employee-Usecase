@@ -9,19 +9,21 @@ class EmployeeWage{
 		int fullTimeHour=8;
 		int partTimeHour=4;
 		int employeeWage;
-		double empcheck=random.nextInt(3);
-		if (empcheck==isFullTime){
-			System.out.println("Employee is present and full time employee");
-			employeeWage = wagePerHour*fullTimeHour;
-			System.out.println("employee wage is:"+employeeWage);
+		int empcheck=random.nextInt(3);
+		switch(empcheck)
+		{
+		case 1:
+				System.out.println("Employee is present and full time employee");
+				employeeWage = wagePerHour*fullTimeHour;
+				System.out.println("employee wage is:"+employeeWage);
+				break;
+		case 2:
+				System.out.println("Employee is present but part time employee");
+				employeeWage = wagePerHour*partTimeHour;
+				System.out.println("employee wage is:"+employeeWage);
+				break;
+		default:
+				System.out.println("Employee is absent");
 		}
-		else if(empcheck==isPartTime){
-			System.out.println("Employee is present but part time employee");
-			employeeWage = wagePerHour*partTimeHour;
-			System.out.println("employee wage is:"+employeeWage);
-		}
-		else
-			System.out.println("Employee is absent");
 	}
 }
-
